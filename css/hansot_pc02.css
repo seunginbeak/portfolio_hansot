@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* 헤더영역 */
+.head .sub { width: 100%;}
+.head .main .gnb > ul {margin-left: 240px;}
+
+/* 메뉴, 매장찾기영역 */
+.menu_store {width: 100%; padding: 0 15px; box-sizing: border-box;}
+.menu_store > div {width: 49%;}
+.menu_store .left {margin-right: 2%;}
+.menu_store .text {height: 120px; padding: 15px 25px;}
+.menu_store .text > p {font-size: 18px; line-height: 26px;}
+.menu_store .text > p > br {display: none;}
+.menu_store .text .next_icon {bottom: 25px;}
+
+/* 가맹점 */
+.franchise {width: 100%; padding: 0 15px; box-sizing: border-box;}
+.franchise .left {width: 28%; margin-right: 2%; padding: 50px 15px;}
+.franchise .right {width: 70%;}
+.franchise .right > div {width: 48.5%;}
+.franchise .right .first {margin-right: 3%;}
+.franchise .right > div > a > .text {padding: 25px;}
+.franchise .right > div > a > .text {font-size: 18px; line-height: 26px;}
+
+/* 식재료이야기 */
+.story {width: 100%;}
+.story .right {width: 420px;}
+
+/* 스토리영역 */
+.brand {width: 100%;}
+.brand > h3 {margin-left: 15px;}
+.brand .container > div { width: 32%; margin-right: 2%;}

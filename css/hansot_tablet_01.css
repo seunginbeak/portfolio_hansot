@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* 헤더영역 */
+.head {position: static; width: 100%;}
+.head .sub {display: none;}
+.head .main {height: 60px;}
+.head .main.fixed {background-color: rgb(255, 255, 255);}
+.head .main > div {width: 100%; height: 60px;}
+.head .main .gnb {position: relative; width: 100%; height: 60px;}
+.head .main .gnb > h1 {position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 60px;}
+.head .main .gnb > h1 > a {width: 25px; height: 25px; background: url("../image/logo_02.png") no-repeat center; background-size: cover;}
+.head .main .gnb > h1 > a.logo {background: url("../image/logo_02.png") no-repeat center; background-size: cover;}
+.head .main .gnb .menu_icon {display: inline-block; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
+.head .main .gnb .menu_icon  > img {width: 30px;}
+.head .main .gnb > ul {display: none;}
+.head .main .dropdown_color {display: none;}
+
+/* 사이드바 */
+.sidebar {display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 5; background-color: white;}
+.sidebar .top {padding: 50px 0 40px 0;}
+.sidebar .top > ul {margin-left: 40px;}
+.sidebar .top > ul::after {content: " "; display: block; clear: both;}
+.sidebar .top > ul > li {float: left; padding: 0 20px;}
+.sidebar .top > ul > li:nth-child(1) {padding-left: 0;}
+.sidebar .top > ul > li > a {font-size: 16px; font-weight: 600; color: #56534d;}
+.sidebar .close {position: absolute; top: 15px; right: 15px; }
+.sidebar .close > img {width: 30px;}
+
+.sidebar .center .gnb > li {display: block; height: auto;}
+.sidebar .center .gnb > li > a {display: inline-block; height: 55px; margin-left: 40px; font-size: 16px; font-weight: 600; line-height: 40px; color: #333333;}
+.sidebar .center .gnb > li > ul {display: none;}
+.sidebar .center .gnb > li > ul.on {display: block; padding: 30px 0; background-color: #eeecec;}
+.sidebar .center .gnb > li > ul > li {height: 30px;}
+.sidebar .center .gnb > li > ul > li > a {margin-left: 40px; font-size: 12px; font-weight: 600; color: #6a6a6a;}
+
+.sidebar .bottom {position: absolute; left: 0; right: 0; bottom: 0; background-color: #f2c000;}
+.sidebar .bottom > ul {margin-left: 40px;}
+.sidebar .bottom > ul::after {content: " "; display: block; clear: both; }
+.sidebar .bottom > ul > li { float: left; padding: 30px 20px 30px 0;}
+
+/* 비주얼영역 */
+.visual {height: 380px;}
+.visual .bu {bottom: 30px;}
+.visual .bu > ul {max-width: 700px;}
+
+/* 메뉴, 매장찾기영역 */
+.menu_store {width: 100%; padding: 0 15px; box-sizing: border-box;}
+.menu_store > div {width: 49%;}
+.menu_store .left {margin-right: 2%;}
+.menu_store .text {height: 120px; padding: 15px 25px;}
+.menu_store .text > p {font-size: 16px; line-height: 22px;}
+.menu_store .text > p > br {display: none;}
+
+/* 가맹점 */
+
+.franchise {width: 100%; padding: 0 15px; box-sizing: border-box;}
+.franchise > div {height: 370px;}
+.franchise .left {width: 28%; margin-right: 2%; padding: 50px 15px;}
+.franchise .left > strong {font-size: 28px;}
+.franchise .left > p > br {display: none;}
+.franchise .right {width: 70%;}
+.franchise .right > div {width: 48.5%; height: 370px;}
+.franchise .right .first {margin-right: 3%;}
+.franchise .right > div > a > .text {padding: 30px 15px;}
+.franchise .right > div > a > .text > p {font-size: 16px; line-height: 22px;}
+.franchise .right > div > a > .text .next_icon {left: 15px;}
+
+/* 중간배너영역 */
+.banner > div > .left > strong {font-size: 28px; line-height: 32px; }
+.banner > div > .left > .shortcuts > p > a {height: 50px; line-height: 50px;}
+
+/* 식재료이야기 */
+.story {width: 100%;}
+.story .left {width: 700px;}
+.story .right {width: 420px;}
+.story .right > div > strong { font-size: 28px; line-height: 32px;}
+
+/* 스토리영역 */
+.brand {width: 100%;}
+.brand .container > div { width: 32%; margin-right: 2%;}
+
+/* 푸터영역 */
+.footer > div {position: relative; max-width: 768px;}
+.footer > div .top > ul {width: 340px; height: 150px;}
+.footer > div .top > ul > li {border-right: none; margin-top: 30px; padding: 0 8px;}
+.footer > div .top > ul > li:nth-child(1),
+.footer > div .top > ul > li:nth-child(2) {display: none;}
+.footer > div .top > ul > li > a {font-size: 14px;}
+.footer > div .top > .award {position: static; text-align: center;}
+
+.footer > div .bottom {position: static; text-align: left; padding: 0;}
+.footer > div .bottom > h3 {position: static; height: 50px; top: 0; font-size: 14px; font-weight: 600; line-height: 50px; text-align: center; border-bottom: 1px solid rgba(55, 55, 55, 0.1);}
+.footer > div .bottom > h3::after {content: " "; display: inline-block; width: 12px; height: 12px; margin-left: 15px; transform: rotate(180deg); background: url("../../../images/icon/iconmonstr-arrow-81-32.png") no-repeat center; background-size: cover;}
+.footer > div .bottom > div {display: none; padding: 30px 0; background-color: #dfb206; }
+.footer > div .bottom .text {display: block; width: 270px; margin-bottom: 0;}
+.footer > div .bottom .text > li {display: inline-block; line-height: 20px; border: none;}
+.footer > div .bottom .text > li > a {font-size: 13px; font-weight: bold; color: #333333; white-space: nowrap;}
+.footer > div .bottom > p {text-align: center;}
+.footer > div .bottom > .icon {position: absolute; top: 85px; left: 50%; transform: translate(-50%, -50%);}

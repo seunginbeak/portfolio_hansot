@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+html {font-size: 20px;}
+body {font-size: 1rem;}
+
+.wrap {position: relative; letter-spacing: -1px;}
+.wrap a { text-decoration: none; }
+.wrap h2 {position: absolute; left: -3000%;}
+
+/* 헤더영역 */
+.head {position: absolute; z-index: 1; width: 100%;}
+.head .sub {width: 1170px; margin: 0 auto;}
+.head .sub::after {content: " "; display: block; clear: both;}
+.head .sub > ul {float: right; height: 30px; padding: 0 13px;}
+.head .sub > ul::after {content: " "; display: block; clear: both; }
+.head .sub > ul > li{float: left;}
+.head .sub > ul > li:nth-child(2) {position: relative;}
+.head .sub > ul > li:nth-child(2)::before {content: " "; display: block; clear: both; position: absolute; top: 5px; left: 0; width: 1px; height: 10px; margin-top: 5px; background-color: #ffffff;}
+.head .sub > ul > li:nth-child(2)::after {content: " "; display: block; clear: both; position: absolute; top: 5px; right: 0; width: 1px; height: 10px; margin-top: 5px; background-color: #ffffff;}
+.head .sub > ul > li > a {display: block; padding: 0 13px; font-size: 10px; font-weight: bold; line-height: 30px; color: #fcfdfb;}
+.head .sub > ul > li:nth-child(3) > a{padding: 0 5px 0 13px }
+.head .sub > ul > li:nth-child(4) > a{padding: 0 13px 0 5px;}
+.head .sub > ul > li:nth-child(3) > a > img {width: 15px; height: 15px;}
+.head .sub > ul > li:nth-child(4) > a > img {height: 15px;}
+.head .sub > ul > li > a > span {position: absolute; top: -3000%;}
+
+.head .main {z-index: 2; width: 100%;}
+.head .main.fixed {position: fixed; left: 0; right: 0; top: 0; height: 60px; background-color: #373737;}
+.head .main .gnb {max-width: 1170px; height: 90px; margin: 0 auto; background-color: rgb(255, 255, 255);}
+.head .main .gnb.fixed {height: 60px; background-color: transparent;}
+.head .main .gnb > h1 {position: relative; width: 150px; height: 100%;}
+.head .main .gnb > h1 > a {display: block; position: absolute; top: 50%; left: 20px; transform: translateY(-50%); width: 115px; height: 50px; background: url("../image/logo.png") no-repeat center; background-size: cover;}
+.head .main .gnb > h1 > a.logo {left: 15px; background: url("../image/logo_03.png") no-repeat center;}
+.head .main .gnb > h1 > a > span {position: absolute; left: -3000%;}
+.head .main .gnb .menu_icon {display: none;}
+.head .main .gnb > ul {height: 100%; margin-left: 350px; margin-top: -90px; overflow: hidden;}
+.head .main .gnb > ul.down {height: 420px; transition: 1s;}
+.head .main .gnb > ul::after {content: " "; display: block; clear: both;}
+.head .main .gnb > ul > li {float: left; height: 100%; padding: 0 10px; text-align: center;}
+.head .main .gnb > ul > li > a {position: relative; display: inline-block; font-size: 16px; font-weight: bold; line-height: 90px; color: #373737;}
+.head .main .gnb > ul > li > a::after {content: " "; display: block; position: absolute; left: 0; right: 0; bottom: 0; width: 0%; height: 7px; margin: 0 auto; background-color: #f5ca00;}
+.head .main .gnb > ul > li > a.on::after {width: 100%; transition: 0.5s;}
+.head .main .gnb > ul > li > ul > li {height: 40px; text-align: center;}
+.head .main .gnb > ul > li > ul > li:nth-child(1) {margin-top: 10px;}
+.head .main .gnb > ul > li > ul > li > a {display: inline-block; font-size: 12px; font-weight: bold; color: #333333;}
+.head .main .gnb > ul > li > ul > li > a:hover {border-bottom: 2px solid black;}
+.head .main .dropdown_color {width: 1170px; height: 0; margin: 0 auto;}
+.head .main .dropdown_color.down {height: 360px; transition: 1s; background-color: rgba(255, 255, 255, 0.9);}
+.head .main .dropdown_color > span {display: none;}
+
+/* 사이드바 */
+.sidebar {display: none;}
+
+/* 비주얼영역 */
+.visual {position: relative; width: 100%; height: 660px; overflow: hidden;}
+.visual .slide {position: absolute; width: 100%; height: 100%;}
+.visual .slide > li {position: absolute; width: 100%; height: 100%; overflow: hidden;}
+.visual .slide > li > a {display: block; width: 100%; height: 100%;}
+.visual .slide > li > a > img {position: absolute; left: 50%; transform: translateX(-50%); height: 100%;}
+.visual .bu {position: absolute; bottom: 80px; width: 100%;}
+.visual .bu > ul {max-width: 1170px; margin: 0 auto;}
+.visual .bu > ul:after {content: " "; display: block; clear: both;}
+.visual .bu > ul > li {float: left; width: 45px; height: 5px; margin-left: 8px; background-color: #cfc7bb;}
+.visual .bu > ul > li.move {background-color: #f5c000;}
+.visual .bu > ul > li > span {display: inline-block; text-indent: -10000px;}
+
+
+/* 메뉴, 매장찾기영역 */
+.menu_store {max-width: 1170px; margin: 0 auto;}
+.menu_store::after {content: " "; display: block; clear: both;}
+.menu_store .left {margin-right: 30px;}
+.menu_store > div {position: relative; float: left; width: 570px; margin-top: 60px; border-bottom: 7px solid black;}
+.menu_store > div::after {content: " "; display: block; position: absolute; left: 0; right: 0; bottom: -7px; width: 0%; height: 7px; margin: 0 auto; background-color: #f5ca00;}
+.menu_store > div.gauge::after {width: 100%; transition: 1s;}
+.menu_store > div > a {width: 100%;}
+.menu_store > div > a > .image > img { width: 100%; }
+.menu_store .text {position: relative; width: 100%; height: 180px; padding: 30px 25px; box-sizing: border-box; background-color: #eeeced;}
+.menu_store .text > p {font-size: 22px; font-weight: 600; line-height: 32px; color: #333333;}
+.menu_store .text .next_icon {position: absolute; left: 25px; bottom: 25px; font-size: 12px; font-weight: bold; color: #333333;}
+.menu_store .text .next_icon > p::before { content: " "; display: inline-block; clear: both; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 20px; height: 20px; background: url("../../../images/icon/icon_play.png") no-repeat left; background-size: cover;}
+.menu_store .text .next_icon > p {margin-left: 25px; font-size: 12px;}
+
+/* 가맹점 */
+.franchise {max-width: 1170px; margin: 60px auto;}
+.franchise::after {content: " "; display: block; clear: both;}
+.franchise > div {float: left; height: 440px;}
+.franchise .left {width: 370px; margin-right: 30px; padding: 45px 25px; box-sizing: border-box; background-color: #f5ca00;}
+.franchise .left > strong {font-size: 36px; font-weight: bold; line-height: 45px; letter-spacing: -4px; color: #373737;}
+.franchise .left > p {margin-top: 50px; font-size: 14px; font-weight: bold; line-height: 26px; color: #333333;}
+.franchise .right::after {content: " "; display: block; clear: both;}
+.franchise .right > div {position: relative; float: left; width: 370px; height: 440px; box-sizing: border-box; border-bottom: 7px solid black; background-color: #eeeced;}
+.franchise .right > div::after {content: " "; display: block; position: absolute; left: 0; right: 0; bottom: -7px; width: 0%; height: 7px; margin: 0 auto; background-color: #f5ca00;}
+.franchise .right > div.gauge::after {width: 100%; transition: 1s;}
+.franchise .right > div > a > .image > img {width: 100%;}
+.franchise .right > div > a > .text {padding: 30px; box-sizing: border-box;}
+.franchise .right > div > a > .text > p {font-size: 22px; font-weight: 600; line-height: 32px; color: #333333;}
+.franchise .right > div > a > .text .next_icon {position: absolute; left: 25px; bottom: 25px; font-size: 12px; font-weight: bold; color: #333333;}
+.franchise .right > div > a > .text .next_icon > p::before {content: " "; display: inline-block; clear: both; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 20px; height: 20px; background: url("../../../images/icon/icon_play.png") no-repeat left; background-size: cover;}
+.franchise .right > div > a > .text .next_icon > p {margin-left: 25px; font-size: 12px;}
+.franchise .right .first { margin-right: 30px;}
+
+/* 중간배너영역 */
+.banner { width: 100%; height: 600px; background: url("../image/brand_img.jpg") no-repeat center; background-size: cover; }
+.banner > div { max-width: 1170px; height: 100%; margin: 0 auto;}
+.banner > div > .left { position: relative; width: 370px; height: 100%; padding: 80px 25px; box-sizing: border-box; background-color: rgba(55, 55, 55, 0.9);}
+.banner > div > .left > strong {font-size: 34px; font-weight: 600; line-height: 40px; letter-spacing: -3px; color: #ffffff;}
+.banner > div > .left > p {width: 320px; margin-top: 60px; font-size: 14px; line-height: 30px; color: #dad8d8;}
+.banner > div > .left > .shortcuts {position: absolute; left: 25px; bottom: 60px;}
+.banner > div > .left > .shortcuts > p {display: inline-block; border: 2px solid white;}
+.banner > div > .left > .shortcuts > p > a {display: block; width: 170px; height: 60px; font-size: 14px; font-weight: bold; line-height: 60px; text-align: center; color: #ffffff; }
+
+/* 식재료 스토리영역 */
+.story {position: relative; width: 1170px; height: 460px; margin: 60px auto;}
+.story .left {position: absolute; left: 0; top: 0; bottom: 0; width: 800px; background: url("../image/main_img_05.jpg") no-repeat center; background-size: cover;}
+.story .left > span {position: absolute; left: -3000%;}
+.story .right {position: absolute; right: 0; top: 0; bottom: 0; width: 370px; background-color: #eeeced;}
+.story .right > div {position: relative; width: 100%; height: 100%; padding: 45px 25px; box-sizing: border-box; border-bottom: 7px solid black;}
+.story .right > div::after {content: " "; display: block; position: absolute; left: 0; right: 0; bottom: -7px; width: 0%; height: 7px; margin: 0 auto; background-color: #f5ca00;}
+.story .right > div.gauge::after {width: 100%; transition: 1s;}
+.story .right > div > strong {font-size: 34px; font-weight: 600; line-height: 45px; color: #373737;}
+.story .right > div > p {margin-top: 60px; font-size: 14px; font-weight: 600; line-height: 25px; color: #747474;}
+.story .right > div > .next_icon {position: absolute; left: 30px; bottom: 25px; font-size: 12px; font-weight: bold; color: #333333;}
+.story .right > div > .next_icon > p::before { content: " "; display: inline-block; clear: both; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 20px; height: 20px; background: url("../../../images/icon/icon_play.png") no-repeat left; background-size: cover;}
+.story .right > div > .next_icon > p {margin-left: 25px; font-size: 12px; color: #333333;}
+
+/* 스토리영역 */
+.brand {max-width: 1170px; margin: 0 auto;}
+.brand > h3 {display: block; position: relative; font-size: 22px; font-weight: bold;}
+.brand > h3::after {content: " "; display: inline-block; clear: both; position: absolute; right: 0; top: 50%; left: 150px; transform: translateY(-50%); height: 15px; background-color: #333333;}
+.brand .container {margin-top: 60px; margin-bottom: 80px;}
+.brand .container::after {content: " "; display: block; clear: both;}
+.brand .container > div {float: left; width: 370px; height: 250px; margin-right: 30px; background-color: #333333;}
+.brand .container > div:last-child {margin-right: 0}
+.brand .container > div > a > .content {width: 100%; height: 100%; position: relative;}
+.brand .container > div:nth-child(1) > a > .content {background: url("../image/more_hansot.jpg") no-repeat center; background-size: cover;}
+.brand .container > div:nth-child(2) > a > .content {background: url("../image/more_event.jpg") no-repeat center; background-size: cover;}
+.brand .container > div:nth-child(3) > a > .content {background: url("../image/more_news.jpg") no-repeat center; background-size: cover;}
+.brand .container > div > a > .content > p {position: absolute; bottom: 0; left: 0; right: 0; padding: 25px 30px; font-size: 14px; font-weight: bold; color: #ffffff; background-color: #333333;}
+.brand .container > div > a > .content > p::after {content: " "; display: inline-block; clear: both; position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+    width: 10px; height: 10px; background: url("../../../images/icon/iconmonstr-arrow-25-48_white.png") no-repeat center; background-size: cover;}
+.brand .container > div > a > .content > p.gold {color: #f2c000; transition: 0.5s;}
+.brand .container > div > a > .content > p.gold::after {transition: 0.5s; background: url("../../../images/icon/iconmonstr-arrow-25-48_gold.png")no-repeat center; background-size: cover;}
+/* 푸터영역 */
+.footer {width: 100%; background-color: #f2c000;}
+.footer > div {max-width: 1170px; margin: 0 auto;}
+.footer > div .top {position: relative; border-bottom: 1px solid rgba(55, 55, 55, 0.1);}
+.footer > div .top > ul { width: 600px; height: 90px; margin: 0 auto;}
+.footer > div .top > ul::after {content: " "; display: block; clear: both; }
+.footer > div .top > ul > li {float: left; margin-top: 50px; padding: 0 10px; box-sizing: border-box; border-right: 2px solid #333333;}
+.footer > div .top > ul > li:last-child {border-right: none;}
+.footer > div .top > ul > li > a {display: block; font-size: 15px; font-weight: bold; color: #333333;}
+.footer > div .top > .award {position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+.footer > div .top > .award > img {width: 180px;}
+
+.footer > div .bottom {position: relative; padding: 30px 0; text-align: center;}
+.footer > div .bottom > h3 { position: absolute; top: -3000%;}
+.footer > div .bottom .text {display: inline-block; margin-bottom: 10px;}
+.footer > div .bottom .text::after {content: " "; display: block; clear: both;}
+.footer > div .bottom .text > li {float: left; padding: 0 10px; border-right: 1px solid #333333;}
+.footer > div .bottom .text > li:last-child {border-right: none;}
+.footer > div .bottom .text > li > a {display: block; font-size: 14px; font-weight: bold; color: #333333;}
+.footer > div .bottom > p {font-size: 14px; font-weight: 600; padding: 20px 0 40px 0;}
+.footer > div .bottom > .icon {display: inline-block}
+.footer > div .bottom > .icon::after {content: " "; display: block; clear: both;}
+.footer > div .bottom > .icon > li {float: left; width: 40px; height: 40px; padding: 0 6px;}
+.footer > div .bottom > .icon > li > a > img {width: 100%;}
