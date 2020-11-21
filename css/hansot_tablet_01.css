@@ -8,8 +8,8 @@
 .head .main > div {width: 100%; height: 60px;}
 .head .main .gnb {position: relative; width: 100%; height: 60px;}
 .head .main .gnb > h1 {position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 60px;}
-.head .main .gnb > h1 > a {width: 25px; height: 25px; background: url("../image/logo_02.png") no-repeat center; background-size: cover;}
-.head .main .gnb > h1 > a.logo {background: url("../image/logo_02.png") no-repeat center; background-size: cover;}
+.head .main .gnb > h1 > a {width: 25px; height: 25px; background: url("../image/common/logo_02.png") no-repeat center; background-size: cover;}
+.head .main .gnb > h1 > a.logo {background: url("../image/common/logo_02.png") no-repeat center; background-size: cover;}
 .head .main .gnb .menu_icon {display: inline-block; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
 .head .main .gnb .menu_icon  > img {width: 30px;}
 .head .main .gnb > ul {display: none;}
@@ -90,7 +90,7 @@
 
 .footer > div .bottom {position: static; text-align: left; padding: 0;}
 .footer > div .bottom > h3 {position: static; height: 50px; top: 0; font-size: 14px; font-weight: 600; line-height: 50px; text-align: center; border-bottom: 1px solid rgba(55, 55, 55, 0.1);}
-.footer > div .bottom > h3::after {content: " "; display: inline-block; width: 12px; height: 12px; margin-left: 15px; transform: rotate(180deg); background: url("../../../images/icon/iconmonstr-arrow-81-32.png") no-repeat center; background-size: cover;}
+.footer > div .bottom > h3::after {content: " "; display: inline-block; width: 12px; height: 12px; margin-left: 15px; transform: rotate(180deg); background: url("../image/icon/iconmonstr-arrow-81-32.png") no-repeat center; background-size: cover;}
 .footer > div .bottom > div {display: none; padding: 30px 0; background-color: #dfb206; }
 .footer > div .bottom .text {display: block; width: 270px; margin-bottom: 0;}
 .footer > div .bottom .text > li {display: inline-block; line-height: 20px; border: none;}
